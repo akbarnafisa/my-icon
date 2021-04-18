@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'univ',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -43,4 +43,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  build: {
+    transpile: [
+      '@myicon/svgs',
+    ],
+  },
 }

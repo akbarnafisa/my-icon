@@ -1,29 +1,36 @@
 {
-  "name": "my-icon",
-  "version": "1.0.0",
+  "name": "myicon",
   "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
-  "dependencies": {
-    "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+  "license": "MIT",
+  "scripts": {
+    "dev:svgs": "yarn workspace @myicon/svgs dev",
+    "dev:docs": "yarn workspace @myicon/docs dev",
+    "build:svgs": "yarn workspace @myicon/svgs build",
+    "lerna:clean": "lerna clean",
+    "lerna:bootstrap": "lerna bootstrap --use-workspaces",
+    "lerna:link": "lerna link",
+    "lerna:new-version": "lerna version patch --conventional-commits",
+    "lerna:publish": "lerna publish from-package"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^6.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
+    "eslint-config-antife": "^2.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-jest": "^23.17.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "lerna": "^4.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.7.0",
-    "prettier": "^2.2.1"
+    "eslint-plugin-vue": "^7.7.0"
+  },
+  "engines": {
+    "node": ">= 10"
   }
 }
