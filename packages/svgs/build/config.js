@@ -1,13 +1,15 @@
 const path = require('path')
+const rootDir = path.resolve(__dirname, '../')
 module.exports = {
+  rootDir,
   icon: {
     input: 'assets/icons/**/*.svg',
-    output: path.resolve(__dirname, '../components/icons'),
+    output: path.resolve(rootDir, 'components/icons'),
     optimize: true,
   },
   illustration: {
     input: 'assets/illustrations/**/*.svg',
-    output: path.resolve(__dirname, '../components/illustrations'),
+    output: path.resolve(rootDir, 'components/illustrations'),
     optimize: true,
   },
 }
