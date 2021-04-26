@@ -1,0 +1,14 @@
+{
+  "iconsCount": 3,
+  "icons": [
+    {
+      "name": "IconBell"
+    },
+    {
+      "name": "IconClock"
+    },
+    {
+      "name": "IconEdit"
+    }
+  ]
+}
