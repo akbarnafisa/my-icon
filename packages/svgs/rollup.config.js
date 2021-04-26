@@ -1,6 +1,8 @@
+import path from 'path'
 import globby from 'globby'
 import vue from 'rollup-plugin-vue'
 import cjs from '@rollup/plugin-commonjs'
+import alias from '@rollup/plugin-alias'
 import babel from 'rollup-plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 import pkg from './package.json'
@@ -31,7 +33,17 @@ const external = [
   ...Object.keys(pkg.peerDependencies || {}),
 ]
 
+const projectRootDir = path.resolve(__dirname)
+
 const plugins = [
+  alias({
+    entries: [
+      {
+        find: new RegExp('^@/(.*)$'),
+        replacement: path.resolve(projectRootDir, '$1')
+      }
+    ]
+  }),
   resolve({
     extensions: ['.vue', '.js']
   }),

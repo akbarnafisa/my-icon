@@ -3,13 +3,13 @@
     :alt="$options.name"
     :width="width || size || null"
     :height="height || size || null"
-    src="@/assets/illustrations/IllusInvoice.svg"
+    src="@/assets/illustrations/office/IllusOffice.svg"
   />
 </template>
 
 <script>
 export default {
-  name: 'IllusInvoice',
+  name: 'IllusOffice',
   props: {
     size: {
       type: [String, Number],
