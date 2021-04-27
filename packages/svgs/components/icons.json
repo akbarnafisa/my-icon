@@ -2,13 +2,16 @@
   "iconsCount": 3,
   "icons": [
     {
-      "name": "IconBell"
+      "name": "IconBell",
+      "path": "icons/IconBell"
     },
     {
-      "name": "IconClock"
+      "name": "IconClock",
+      "path": "icons/IconClock"
     },
     {
-      "name": "IconEdit"
+      "name": "IconEdit",
+      "path": "icons/office/IconEdit"
     }
   ]
 }

@@ -56,6 +56,7 @@ globby([config.input]).then(icon => {
         })
       illustrationsFiles.push({
         name: filename,
+        path: `illustrations${outputPath}`
       })
     })
 
@@ -68,6 +69,21 @@ globby([config.input]).then(icon => {
         return a.name < b.name ? -1 : 1
       }),
     }
+
+    const indexIconPath = `${baseConfig.rootDir}/components/illustrations.js`
+    try {
+      fse.unlinkSync(indexIconPath)
+    } catch (e) {}
+
+    fse.outputFileSync(indexIconPath, '')
+    illustrationsInfo.illustrations.forEach(v => {
+      fse.writeFileSync(
+        indexIconPath,
+        fse.readFileSync(indexIconPath).toString('utf-8') +
+          `export { default as ${v.name} } from './${v.path}'\n`,
+        'utf-8'
+      )
+    })
 
     // generate illustrations.json
     fse.outputFile(

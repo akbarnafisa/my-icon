@@ -72,6 +72,7 @@ globby([config.input]).then(icon => {
 
       iconsFiles.push({
         name: filename,
+        path: `icons${outputPath}`,
       })
     })
 
@@ -84,6 +85,21 @@ globby([config.input]).then(icon => {
         return a.name < b.name ? -1 : 1
       }),
     }
+
+    const indexIconPath = `${baseConfig.rootDir}/components/icons.js`
+    try {
+      fse.unlinkSync(indexIconPath)
+    } catch (e) {}
+    fse.outputFileSync(indexIconPath, '')
+    iconsInfo.icons.forEach(v => {
+      fse.writeFileSync(
+        indexIconPath,
+        fse.readFileSync(indexIconPath).toString('utf-8') +
+          `export { default as ${v.name} } from './${v.path}'\n`,
+        'utf-8'
+      )
+    })
+
     // generate icons.json
     fse.outputFile(
       `${baseConfig.rootDir}/components/icons.json`,

@@ -2,10 +2,12 @@
   "illustrationsCount": 2,
   "illustrations": [
     {
-      "name": "IllusInvoice"
+      "name": "IllusInvoice",
+      "path": "illustrations/IllusInvoice"
     },
     {
-      "name": "IllusOffice"
+      "name": "IllusOffice",
+      "path": "illustrations/office/IllusOffice"
     }
   ]
 }
