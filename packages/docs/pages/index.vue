@@ -1,18 +1,7 @@
 <template>
-  <div>
-    <IconBell color="red" />
-    <IconClock color="green" />
-    <IllusInvoice />
-  </div>
+  <div>wew</div>
 </template>
 
 <script>
-import { IconBell, IconClock, IllusInvoice } from '@myicon/svgs'
-export default {
-  components: {
-    IconBell,
-    IconClock,
-    IllusInvoice,
-  },
-}
+export default {}
 </script>

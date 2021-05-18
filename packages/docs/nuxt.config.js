@@ -14,10 +14,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/styles/tailwind.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/globals.js' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -26,12 +26,14 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/markdownit',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -44,8 +46,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   build: {
-    transpile: [
-      '@myicon/svgs',
-    ],
+    transpile: ['@myicon/svgs'],
+  },
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: ['markdown-it-div', 'markdown-it-attrs'],
   },
 }

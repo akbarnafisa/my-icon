@@ -11,14 +11,21 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@myicon/svgs": "0.0.1",
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3",
-    "@myicon/svgs": "0.0.1"
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-div": "^1.1.0",
+    "nuxt": "^2.15.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "eslint-plugin-nuxt": "^2.0.0"
+    "@nuxtjs/tailwindcss": "^4.0.3",
+    "autoprefixer": "^9",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
