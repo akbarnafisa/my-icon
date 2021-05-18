@@ -20,7 +20,7 @@ export default {
   props: {
     size: {
       type: [String, Number],
-      default: 128,
+      default: '',
     },
     width: {
       type: [String, Number],
@@ -36,7 +36,7 @@ export default {
 `
 console.log(chalk.black.bgGreen.bold('Generate Illustration'))
 
-globby([config.input]).then(icon => {
+globby([...config.input, ...config.exclude]).then(icon => {
   try {
     const illustrationsFiles = []
 
@@ -56,7 +56,7 @@ globby([config.input]).then(icon => {
         })
       illustrationsFiles.push({
         name: filename,
-        path: `illustrations${outputPath}`
+        path: `illustrations${outputPath}`,
       })
     })
 

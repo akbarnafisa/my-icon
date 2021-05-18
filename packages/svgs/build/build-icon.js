@@ -36,7 +36,7 @@ const generateVue = ({ svg, filename }) => `
 
 console.log(chalk.black.bgGreen.bold('Generate Icon'))
 
-globby([config.input]).then(icon => {
+globby([...config.input, ...config.exclude]).then(icon => {
   try {
     const iconsFiles = []
 
