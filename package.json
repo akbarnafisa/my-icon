@@ -9,8 +9,9 @@
   "license": "MIT",
   "scripts": {
     "dev:docs": "yarn workspace @myicon/docs dev",
-    "build:svgs": "yarn workspace @myicon/svgs build",
+    "build:svgs": "yarn workspace @myicon/svgs build && yarn lerna:link",
     "generate-svgs": "yarn workspace @myicon/svgs generate-svgs",
+    "optimize-svgs": "yarn workspace @myicon/svgs svgs:optimize",
     "lerna:clean": "lerna clean",
     "lerna:bootstrap": "lerna bootstrap --use-workspaces",
     "lerna:link": "lerna link",

@@ -9,7 +9,8 @@
     "generate-svgs": "yarn run svgs:icon && yarn run svgs:illustration && yarn run prettier",
     "prettier": "prettier --write 'components/**/*'",
     "svgs:icon": "node build/build-icon.js",
-    "svgs:illustration": "node build/build-illustration.js"
+    "svgs:illustration": "node build/build-illustration.js",
+    "svgs:optimize": "node build/optimize-icon.js"
   },
   "peerDependencies": {
     "vue": "^2.6.10"
@@ -41,5 +42,6 @@
   },
   "dependencies": {
     "svg-to-vue": "^0.7.0"
-  }
+  },
+  "sideEffects": false
 }
