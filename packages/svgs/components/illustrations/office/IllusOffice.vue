@@ -13,7 +13,7 @@ export default {
   props: {
     size: {
       type: [String, Number],
-      default: 128,
+      default: '',
     },
     width: {
       type: [String, Number],

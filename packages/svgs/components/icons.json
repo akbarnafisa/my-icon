@@ -3,15 +3,18 @@
   "icons": [
     {
       "name": "IconBell",
-      "path": "icons/IconBell"
+      "path": "icons/IconBell",
+      "size": 452
     },
     {
       "name": "IconClock",
-      "path": "icons/IconClock"
+      "path": "icons/IconClock",
+      "size": 283
     },
     {
       "name": "IconEdit",
-      "path": "icons/office/IconEdit"
+      "path": "icons/office/IconEdit",
+      "size": 452
     }
   ]
 }

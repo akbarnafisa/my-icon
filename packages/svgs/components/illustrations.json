@@ -3,11 +3,13 @@
   "illustrations": [
     {
       "name": "IllusInvoice",
-      "path": "illustrations/IllusInvoice"
+      "path": "illustrations/IllusInvoice",
+      "size": 3531
     },
     {
       "name": "IllusOffice",
-      "path": "illustrations/office/IllusOffice"
+      "path": "illustrations/office/IllusOffice",
+      "size": 3531
     }
   ]
 }
