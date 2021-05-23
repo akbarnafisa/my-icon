@@ -1,5 +1,6 @@
 const globby = require('globby')
 const fse = require('fs-extra')
+const fs = require('fs')
 const baseConfig = require('./config.js')
 const config = baseConfig.icon
 const chalk = require('chalk')
@@ -59,11 +60,20 @@ globby([...config.input, ...config.exclude]).then(icon => {
       // generate .vue file
       const svgVueFile = generateVue({ filename, svg: svgReplaceFill })
       const outputPath = v.match('assets/icons(.*).svg')[1]
+      const size = fs.statSync(v).size
 
       fse
         .outputFile(`${config.output}${outputPath}.vue`, svgVueFile)
         .then(() => {
-          console.log(`    ${chalk.green('√')} ${filename}`)
+          if (size > config.maxSize) {
+            console.log(
+              `    ${chalk.yellow('⚠️')}  ${filename}, Exceed ${
+                config.maxSize
+              } bytes`
+            )
+          } else {
+            console.log(`    ${chalk.green('√')} ${filename}`)
+          }
         })
         .catch(error => {
           console.log(`    ${chalk.red('X')} ${filename}`)
@@ -73,6 +83,7 @@ globby([...config.input, ...config.exclude]).then(icon => {
       iconsFiles.push({
         name: filename,
         path: `icons${outputPath}`,
+        size,
       })
     })
 
