@@ -20,7 +20,8 @@ globby([
     console.log(`    ${chalk.green('√')} ${filename}`)
 
     const result = optimize(fse.readFileSync(path).toString(), {
-      removeViewBox: false,
+      path,
+      plugins: [{ name: 'removeViewBox', active: false }],
     })
     fse.writeFileSync(path, result.data, 'utf-8')
   })

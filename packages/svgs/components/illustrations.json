@@ -1,6 +1,6 @@
 {
-  "illustrationsCount": 2,
-  "illustrations": [
+  "total": 2,
+  "files": [
     {
       "name": "IllusInvoice",
       "path": "illustrations/IllusInvoice",

@@ -9,8 +9,10 @@ const generateVue = ({ asset, filename }) => `
 <template>
   <img
     :alt="$options.name"
-    :width="width || size || null"
-    :height="height || size || null"
+    :style="{
+      width: width || size || null,
+      height: height || size || null,
+    }"
     src="@/${asset}"
   />
 </template>
@@ -73,8 +75,8 @@ globby([...config.input, ...config.exclude]).then(icon => {
     })
 
     const illustrationsInfo = {
-      illustrationsCount: illustrationsFiles.length,
-      illustrations: illustrationsFiles.sort((a, b) => {
+      total: illustrationsFiles.length,
+      files: illustrationsFiles.sort((a, b) => {
         if (a.name === b.name) {
           return 0
         }
@@ -88,7 +90,7 @@ globby([...config.input, ...config.exclude]).then(icon => {
     } catch (e) {}
 
     fse.outputFileSync(indexIconPath, '')
-    illustrationsInfo.illustrations.forEach(v => {
+    illustrationsInfo.files.forEach(v => {
       fse.writeFileSync(
         indexIconPath,
         fse.readFileSync(indexIconPath).toString('utf-8') +

@@ -1,8 +1,10 @@
 <template>
   <img
     :alt="$options.name"
-    :width="width || size || null"
-    :height="height || size || null"
+    :style="{
+      width: width || size || null,
+      height: height || size || null,
+    }"
     src="@/assets/illustrations/office/IllusOffice.svg"
   />
 </template>

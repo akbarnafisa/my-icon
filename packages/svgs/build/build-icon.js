@@ -88,8 +88,8 @@ globby([...config.input, ...config.exclude]).then(icon => {
     })
 
     const iconsInfo = {
-      iconsCount: iconsFiles.length,
-      icons: iconsFiles.sort((a, b) => {
+      total: iconsFiles.length,
+      files: iconsFiles.sort((a, b) => {
         if (a.name === b.name) {
           return 0
         }
@@ -102,7 +102,7 @@ globby([...config.input, ...config.exclude]).then(icon => {
       fse.unlinkSync(indexIconPath)
     } catch (e) {}
     fse.outputFileSync(indexIconPath, '')
-    iconsInfo.icons.forEach(v => {
+    iconsInfo.files.forEach(v => {
       fse.writeFileSync(
         indexIconPath,
         fse.readFileSync(indexIconPath).toString('utf-8') +
