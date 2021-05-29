@@ -50,7 +50,7 @@ html {
 
     padding: 36px;
     margin: 0 auto;
-    max-width: 1240px;
+    max-width: 1140px;
     position: relative;
     display: flex;
   }
