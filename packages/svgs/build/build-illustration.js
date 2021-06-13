@@ -56,7 +56,7 @@ globby([...config.input, ...config.exclude]).then(icon => {
             console.log(
               `    ${chalk.yellow('⚠️')}  ${filename}, Exceed ${
                 config.maxSize
-              } bytes`
+              } bytes (${size})`
             )
           } else {
             console.log(`    ${chalk.green('√')} ${filename}`)
