@@ -11,9 +11,9 @@ globby([
   ...config.icon.exclude,
   ...config.illustration.input,
   ...config.illustration.exclude,
-  '!src/assets/**/*.png',
-  '!src/assets/**/*.jpeg',
-  '!src/assets/**/*.jpg',
+  '!assets/**/*.png',
+  '!assets/**/*.jpeg',
+  '!assets/**/*.jpg',
 ]).then(icon => {
   icon.forEach(path => {
     const filename = path.match(/([^\/]+)(?=\.\w+$)/)[0]
