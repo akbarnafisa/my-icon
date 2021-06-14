@@ -1,20 +1,45 @@
 {
-  "total": 26,
+  "total": 51,
   "files": [
     {
-      "name": "IconBell",
-      "path": "icons/IconBell",
-      "size": 631
+      "name": "IconBar_chart",
+      "path": "icons/chart/IconBar_chart",
+      "size": 172
     },
     {
-      "name": "IconClock",
-      "path": "icons/IconClock",
-      "size": 355
+      "name": "IconBar_chart_alt",
+      "path": "icons/chart/IconBar_chart_alt",
+      "size": 236
     },
     {
-      "name": "IconEdit",
-      "path": "icons/office/IconEdit",
-      "size": 631
+      "name": "IconBar_chart_circle",
+      "path": "icons/chart/IconBar_chart_circle",
+      "size": 301
+    },
+    {
+      "name": "IconBar_chart_horizontal",
+      "path": "icons/chart/IconBar_chart_horizontal",
+      "size": 182
+    },
+    {
+      "name": "IconBar_chart_square",
+      "path": "icons/chart/IconBar_chart_square",
+      "size": 244
+    },
+    {
+      "name": "IconDoughnut_chart",
+      "path": "icons/chart/IconDoughnut_chart",
+      "size": 299
+    },
+    {
+      "name": "IconGroup",
+      "path": "icons/user/IconGroup",
+      "size": 373
+    },
+    {
+      "name": "IconGroup_alt",
+      "path": "icons/user/IconGroup_alt",
+      "size": 373
     },
     {
       "name": "IconHeading",
@@ -55,6 +80,21 @@
       "name": "IconHide",
       "path": "icons/edit/IconHide",
       "size": 824
+    },
+    {
+      "name": "IconId_card",
+      "path": "icons/user/IconId_card",
+      "size": 512
+    },
+    {
+      "name": "IconLine_chart_down",
+      "path": "icons/chart/IconLine_chart_down",
+      "size": 279
+    },
+    {
+      "name": "IconLine_chart_up",
+      "path": "icons/chart/IconLine_chart_up",
+      "size": 289
     },
     {
       "name": "IconMinus_circle",
@@ -154,7 +194,67 @@
     {
       "name": "IconShow",
       "path": "icons/edit/IconShow",
-      "size": 1010
+      "size": 589
+    },
+    {
+      "name": "IconTrending_down",
+      "path": "icons/chart/IconTrending_down",
+      "size": 300
+    },
+    {
+      "name": "IconTrending_up",
+      "path": "icons/chart/IconTrending_up",
+      "size": 296
+    },
+    {
+      "name": "IconUser",
+      "path": "icons/user/IconUser",
+      "size": 246
+    },
+    {
+      "name": "IconUser_check",
+      "path": "icons/user/IconUser_check",
+      "size": 310
+    },
+    {
+      "name": "IconUser_circle",
+      "path": "icons/user/IconUser_circle",
+      "size": 648
+    },
+    {
+      "name": "IconUser_close",
+      "path": "icons/user/IconUser_close",
+      "size": 375
+    },
+    {
+      "name": "IconUser_heart",
+      "path": "icons/user/IconUser_heart",
+      "size": 524
+    },
+    {
+      "name": "IconUser_minus",
+      "path": "icons/user/IconUser_minus",
+      "size": 239
+    },
+    {
+      "name": "IconUser_pin",
+      "path": "icons/user/IconUser_pin",
+      "size": 379
+    },
+    {
+      "name": "IconUser_plus",
+      "path": "icons/user/IconUser_plus",
+      "size": 258
+    },
+    {
+      "name": "IconUser_square",
+      "path": "icons/user/IconUser_square",
+      "size": 329
+    },
+    {
+      "name": "IconUser_voice",
+      "path": "icons/user/IconUser_voice",
+      "size": 383
     }
   ]
 }

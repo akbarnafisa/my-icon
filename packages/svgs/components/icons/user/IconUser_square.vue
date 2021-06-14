@@ -1,0 +1,42 @@
+<template>
+  <svg
+    viewBox="0 0 24 24"
+    :width="width || size"
+    :height="height || size"
+    :fill="color"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+      :fill="color"
+    />
+    <path
+      d="M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4zM4 4v16h3a5 5 0 0 1 10 0h3V4H4zm11 16a3 3 0 1 0-6 0h6z"
+      :fill="color"
+    />
+  </svg>
+</template>
+
+<script>
+export default {
+  name: 'IconUser_square',
+  props: {
+    size: {
+      type: [String, Number],
+      default: 24,
+    },
+    width: {
+      type: [String, Number],
+      default: '',
+    },
+    height: {
+      type: [String, Number],
+      default: '',
+    },
+    color: {
+      type: String,
+      default: '#A4A4A4',
+    },
+  },
+}
+</script>
