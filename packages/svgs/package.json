@@ -1,7 +1,6 @@
 {
   "name": "@myicon/svgs",
   "version": "0.0.1",
-  "private": true,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
@@ -39,9 +38,6 @@
     "svgo": "^2.3.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
-  },
-  "dependencies": {
-    "svg-to-vue": "^0.7.0"
   },
   "sideEffects": false
 }
