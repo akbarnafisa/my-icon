@@ -10,7 +10,7 @@ module.exports = {
     maxSize: 1000,
   },
   illustration: {
-    input: ['assets/illustrations/**/*.svg'],
+    input: ['assets/illustrations/**/*.svg', 'assets/illustrations/**/*.png'],
     exclude: [],
     output: path.resolve(rootDir, 'components/illustrations'),
     optimize: true,

@@ -1,15 +1,40 @@
 {
-  "total": 2,
+  "total": 7,
   "files": [
     {
-      "name": "IllusInvoice",
-      "path": "illustrations/IllusInvoice",
-      "size": 3531
+      "name": "IllusAgreement",
+      "path": "illustrations/IllusAgreement",
+      "size": 7393
     },
     {
-      "name": "IllusOffice",
-      "path": "illustrations/office/IllusOffice",
-      "size": 3531
+      "name": "IllusConfirmed",
+      "path": "illustrations/profile/IllusConfirmed",
+      "size": 7720
+    },
+    {
+      "name": "IllusOrdinaryDay",
+      "path": "illustrations/IllusOrdinaryDay",
+      "size": 9883
+    },
+    {
+      "name": "IllusSocialBio",
+      "path": "illustrations/profile/IllusSocialBio",
+      "size": 12952
+    },
+    {
+      "name": "IllusSocialGrowth",
+      "path": "illustrations/IllusSocialGrowth",
+      "size": 7578
+    },
+    {
+      "name": "IllusSuccessful",
+      "path": "illustrations/profile/IllusSuccessful",
+      "size": 11710
+    },
+    {
+      "name": "IllusSwipe",
+      "path": "illustrations/IllusSwipe",
+      "size": 5734
     }
   ]
 }

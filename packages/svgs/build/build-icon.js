@@ -44,7 +44,13 @@ globby([...config.input, ...config.exclude]).then(icon => {
     icon.forEach(v => {
       let filename = v.match(/([^\/]+)(?=\.\w+$)/)[0]
       const svgString = fse.readFileSync(v).toString()
-      const svgReplaceWidth = svgString.replace(
+
+      const svgAddViewBox = svgString.replace(
+        '<svg',
+        '<svg viewBox="0 0 24 24"'
+      )
+
+      const svgReplaceWidth = svgAddViewBox.replace(
         /(width)=\".*?\"/,
         ':width="width || size"'
       )

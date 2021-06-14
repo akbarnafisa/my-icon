@@ -21,7 +21,6 @@ globby([
 
     const result = optimize(fse.readFileSync(path).toString(), {
       path,
-      plugins: [{ name: 'removeViewBox', active: false }],
     })
     fse.writeFileSync(path, result.data, 'utf-8')
   })

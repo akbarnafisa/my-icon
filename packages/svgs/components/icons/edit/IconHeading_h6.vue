@@ -1,21 +1,20 @@
 <template>
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     :width="width || size"
     :height="height || size"
-    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path
+      d="M10 4v7H4V4H2v16h2v-7h6v7h2V4h-2zm7.999 8.32L20.597 8h-2.309l-3.742 6.222A3.71 3.71 0 0 0 14 16.16c0 2.122 1.79 3.84 4 3.84s4-1.718 4-3.84-1.791-3.84-4.001-3.84zM16 16.16c0-1.06.895-1.92 2-1.92s2 .86 2 1.92-.895 1.92-2 1.92-2-.86-2-1.92z"
       :fill="color"
-      fill-rule="evenodd"
-      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V6c0-.552-.448-1-1-1s-1 .448-1 1v5.573l-2.42 2.42c-.391.391-.391 1.025 0 1.415.39.39 1.023.39 1.413 0l2.825-2.833c.115-.162.182-.36.182-.575z"
     />
   </svg>
 </template>
 
 <script>
 export default {
-  name: 'IconClock',
+  name: 'IconHeading_h6',
   props: {
     size: {
       type: [String, Number],

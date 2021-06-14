@@ -5,13 +5,13 @@
       width: width || size || null,
       height: height || size || null,
     }"
-    src="@/assets/illustrations/IllusInvoice.svg"
+    src="@/assets/illustrations/IllusSocialGrowth.svg"
   />
 </template>
 
 <script>
 export default {
-  name: 'IllusInvoice',
+  name: 'IllusSocialGrowth',
   props: {
     size: {
       type: [String, Number],
