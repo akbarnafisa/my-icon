@@ -46,7 +46,7 @@
     - Commit your changes then create pull request to `main` branch
 
      ### Illustrations
-    - An illustration can be as `.svg` or `.png` format, for illustration we recommend the size is not exceed 10 Kb
+    - An illustration can be as `.svg` or `.png` format, for illustration we recommend the size is not exceed 10 Kb and use `.svg` format for smaller file size
     - Illustrations are placed in the `packages/svgs/assets/illustrations` folder, use prefix `Illus` to name the icon
     - If the asset has not been optimized, you can compress the assets by running command `optimizie-svgs` in the root project
     - After adding new assets, execute the following commands
