@@ -1,4 +1,4 @@
-# My Icon SVG
+# My Icon Docs
 
 ## Build Setup
 
