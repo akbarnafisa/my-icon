@@ -76,7 +76,8 @@ export default globby([
       },
       output: {
         dir: 'dist/esm',
-        format: 'esm'
+        format: 'esm',
+        exports: 'named'
       },
       plugins,
       external
