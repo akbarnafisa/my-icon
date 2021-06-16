@@ -1,5 +1,5 @@
 # My Icon
-Manage all Icon and Illustrations by create package and optimize all of the assets. Use this site to search all of the available icons and Illustrations.
+Manage all Icon and Illustrations by create package and optimize all of the assets. Use this site to search all of the available icons and Illustrations. You can see the documentation in [here](https://my-icon.vercel.app/), for the resource of the icon for this project is from [undraw](https://undraw.co/) and [coolicons](https://www.figma.com/community/file/800815864899415771) from figma
 
 ## Requirements
 This project monorepo project using Lerna, you will need `yarn` installed on your computer.
