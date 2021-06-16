@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3](https://github.com/akbarnafisa/my-icon/compare/@myicon/svgs@0.0.2...@myicon/svgs@0.0.3) (2021-06-16)
+
+
+### Features
+
+* **icons:** add icon device ([9a6e583](https://github.com/akbarnafisa/my-icon/commit/9a6e5839b29915d6ccfca4387df5e47222c24149))
+
+
+
+
+
 ## 0.0.2 (2021-06-14)
 
 
