@@ -32,7 +32,7 @@ html {
 }
 
 .content {
-  @media (max-width: 992px) {
+  @media (max-width: 1024px) {
     margin-left: 0;
   }
   width: 100%;
@@ -40,7 +40,7 @@ html {
   margin-left: 279px;
 
   &__wrapper {
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
       padding: 24px;
     }
 
