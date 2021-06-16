@@ -1,5 +1,5 @@
 {
-  "total": 51,
+  "total": 57,
   "files": [
     {
       "name": "IconBar_chart",
@@ -25,6 +25,11 @@
       "name": "IconBar_chart_square",
       "path": "icons/chart/IconBar_chart_square",
       "size": 244
+    },
+    {
+      "name": "IconDevices",
+      "path": "icons/device/IconDevices",
+      "size": 263
     },
     {
       "name": "IconDoughnut_chart",
@@ -87,6 +92,11 @@
       "size": 512
     },
     {
+      "name": "IconLaptop",
+      "path": "icons/device/IconLaptop",
+      "size": 203
+    },
+    {
       "name": "IconLine_chart_down",
       "path": "icons/chart/IconLine_chart_down",
       "size": 279
@@ -110,6 +120,21 @@
       "name": "IconMinus_square",
       "path": "icons/edit/IconMinus_square",
       "size": 200
+    },
+    {
+      "name": "IconMobile",
+      "path": "icons/device/IconMobile",
+      "size": 234
+    },
+    {
+      "name": "IconMobile_alt",
+      "path": "icons/device/IconMobile_alt",
+      "size": 240
+    },
+    {
+      "name": "IconMonitor",
+      "path": "icons/device/IconMonitor",
+      "size": 215
     },
     {
       "name": "IconMove",
@@ -195,6 +220,11 @@
       "name": "IconShow",
       "path": "icons/edit/IconShow",
       "size": 589
+    },
+    {
+      "name": "IconTablet",
+      "path": "icons/device/IconTablet",
+      "size": 230
     },
     {
       "name": "IconTrending_down",
