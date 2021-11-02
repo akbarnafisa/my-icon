@@ -1,20 +1,11 @@
+
 <template>
-  <svg
-    viewBox="0 0 24 24"
-    :width="width || size"
-    :height="height || size"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zM5 5v14h14V5H5zm12 8H7v-2h10v2z"
-      :fill="color"
-    />
-  </svg>
+  <svg viewBox="0 0 24 24" :width="width || size" :height="height || size" :fill="color" xmlns="http://www.w3.org/2000/svg"><path d="M22 21H2V11a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3h4a2 2 0 0 1 2 2v12zM16 9v10h4V9h-4zm-6-5v15h4V4h-4zm-6 7v8h4v-8H4z" :fill="color"/></svg>
 </template>
 
 <script>
 export default {
-  name: 'IconMinus_square',
+  name: 'IconBar_chart_alt',
   props: {
     size: {
       type: [String, Number],
