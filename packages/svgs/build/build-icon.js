@@ -19,14 +19,6 @@ export default {
       type: [String, Number],
       default: 24,
     },
-    width: {
-      type: [String, Number],
-      default: '',
-    },
-    height: {
-      type: [String, Number],
-      default: '',
-    },
     color: {
       type: String,
       default: '#A4A4A4',

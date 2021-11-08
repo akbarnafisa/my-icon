@@ -9,8 +9,6 @@ console.log(chalk.black.bgGreen.bold('Optimize Assets'))
 globby([
   ...config.icon.input,
   ...config.icon.exclude,
-  ...config.illustration.input,
-  ...config.illustration.exclude,
   '!assets/**/*.png',
   '!assets/**/*.jpeg',
   '!assets/**/*.jpg',
