@@ -1,25 +1,115 @@
 {
-  "total": 4,
+  "total": 22,
   "files": [
     {
-      "name": "IconBar_chart_alt",
-      "path": "icons/IconBar_chart_alt",
-      "size": 236
+      "name": "calendar",
+      "path": "icons/calendar",
+      "size": 321
     },
     {
-      "name": "IconBar_chart_circle",
-      "path": "icons/IconBar_chart_circle",
-      "size": 301
+      "name": "calendar_calendar",
+      "path": "icons/calendar_calendar",
+      "size": 239
     },
     {
-      "name": "IconBar_chart_horizontal",
-      "path": "icons/IconBar_chart_horizontal",
-      "size": 182
+      "name": "calendar_check",
+      "path": "icons/calendar_check",
+      "size": 310
     },
     {
-      "name": "IconBar_chart_square",
-      "path": "icons/IconBar_chart_square",
-      "size": 244
+      "name": "calendar_edit",
+      "path": "icons/calendar_edit",
+      "size": 327
+    },
+    {
+      "name": "calendar_event",
+      "path": "icons/calendar_event",
+      "size": 242
+    },
+    {
+      "name": "calendar_minus",
+      "path": "icons/calendar_minus",
+      "size": 243
+    },
+    {
+      "name": "calendar_plus",
+      "path": "icons/calendar_plus",
+      "size": 262
+    },
+    {
+      "name": "calendar_test",
+      "path": "icons/calendar_test",
+      "size": 243
+    },
+    {
+      "name": "calendar_week",
+      "path": "icons/calendar_week",
+      "size": 243
+    },
+    {
+      "name": "group",
+      "path": "icons/group",
+      "size": 375
+    },
+    {
+      "name": "group_alt",
+      "path": "icons/group_alt",
+      "size": 376
+    },
+    {
+      "name": "id_card",
+      "path": "icons/id_card",
+      "size": 512
+    },
+    {
+      "name": "user",
+      "path": "icons/user",
+      "size": 246
+    },
+    {
+      "name": "user_check",
+      "path": "icons/user_check",
+      "size": 310
+    },
+    {
+      "name": "user_circle",
+      "path": "icons/user_circle",
+      "size": 645
+    },
+    {
+      "name": "user_close",
+      "path": "icons/user_close",
+      "size": 375
+    },
+    {
+      "name": "user_heart",
+      "path": "icons/user_heart",
+      "size": 524
+    },
+    {
+      "name": "user_minus",
+      "path": "icons/user_minus",
+      "size": 239
+    },
+    {
+      "name": "user_pin",
+      "path": "icons/user_pin",
+      "size": 379
+    },
+    {
+      "name": "user_plus",
+      "path": "icons/user_plus",
+      "size": 258
+    },
+    {
+      "name": "user_square",
+      "path": "icons/user_square",
+      "size": 329
+    },
+    {
+      "name": "user_voice",
+      "path": "icons/user_voice",
+      "size": 383
     }
   ]
 }
