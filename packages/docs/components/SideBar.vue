@@ -42,9 +42,6 @@
       <div>
         <nuxt-link to="/icons">Icons</nuxt-link>
       </div>
-      <div>
-        <nuxt-link to="/illustrations">Illustrations</nuxt-link>
-      </div>
     </nav>
   </div>
 </template>
