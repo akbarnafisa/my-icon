@@ -21,6 +21,7 @@ jobs:
           FIGMA_PROJECT_NODE_ID: ${{ secrets.FIGMA_PROJECT_NODE_ID }}
           DEV_ACCESS_TOKEN: ${{ secrets.DEV_ACCESS_TOKEN }}
         run: yarn export-svgs
+        run: yarn optimize-svgs
       # - name: Generate Icon
       #   run: yarn generate-svgs
 
