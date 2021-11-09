@@ -20,8 +20,8 @@ jobs:
           FIGMA_PROJECT_ID: ${{ secrets.FIGMA_PROJECT_ID }}
           FIGMA_PROJECT_NODE_ID: ${{ secrets.FIGMA_PROJECT_NODE_ID }}
           DEV_ACCESS_TOKEN: ${{ secrets.DEV_ACCESS_TOKEN }}
-      - run: yarn export-svgs
+        run: yarn export-svgs
       # - name: Generate Icon
-      # - run: yarn generate-svgs
+      #   run: yarn generate-svgs
 
       # This is a basic workflow to help you get started with Actions
