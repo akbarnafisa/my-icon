@@ -28,7 +28,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m ""
+          git commit -m "Add icon"
           git push
       # - name: Generate Icon
       #   run: yarn generate-svgs
