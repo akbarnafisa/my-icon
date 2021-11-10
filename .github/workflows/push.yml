@@ -23,6 +23,13 @@ jobs:
         run: |
           yarn export-svgs
           yarn optimize-svgs
+      - name: Commit SVGs
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m ""
+          git push
       # - name: Generate Icon
       #   run: yarn generate-svgs
 
