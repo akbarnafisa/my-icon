@@ -9,13 +9,10 @@ jobs:
     name: figma icon automation
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - uses: actions/checkout@v2
-      - name: Create Branch
-        run: |
-          git checkout -b figma-webhooks-new-icon
       - run: yarn install
       - name: Export Figma
         env:
@@ -31,7 +28,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git pull
+          git checkout -b figma-webhooks-new-icon
           git add .
           git commit -m "Add icon"
           git push -u origin HEAD
