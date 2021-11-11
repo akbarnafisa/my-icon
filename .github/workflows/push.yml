@@ -24,6 +24,7 @@ jobs:
           yarn export-svgs
           yarn optimize-svgs
           yarn generate-svgs
+          yarn build:svgs
       - name: Commit SVGs
         run: |
           git config user.name github-actions
@@ -34,6 +35,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3.11.0
         with:
           token: ${{ secrets.GH_TOKEN }}
+          branch-suffix: short-commit-hash
           commit-message: Auto Pull Request
-          title: Your desired title
+          title: Add Icon
           body: Auto-created Pull Request
