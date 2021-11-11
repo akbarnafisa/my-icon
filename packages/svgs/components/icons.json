@@ -1,5 +1,5 @@
 {
-  "total": 22,
+  "total": 23,
   "files": [
     {
       "name": "calendar",
@@ -47,14 +47,19 @@
       "size": 243
     },
     {
+      "name": "communication_message",
+      "path": "icons/communication_message",
+      "size": 241
+    },
+    {
       "name": "group",
       "path": "icons/group",
-      "size": 375
+      "size": 373
     },
     {
       "name": "group_alt",
       "path": "icons/group_alt",
-      "size": 376
+      "size": 373
     },
     {
       "name": "id_card",
