@@ -9,11 +9,11 @@ jobs:
     name: figma icon automation
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v2
       - uses: actions/checkout@v2
       - name: Create Branch
         run: |
           git checkout -b figma-webhooks-new-icon
-      - uses: actions/setup-node@v2
         with:
           node-version: '14'
       - run: yarn install
@@ -42,4 +42,4 @@ jobs:
           title: Your desired title
           body: Auto-created Pull Request
           branch: ${{ github.ref }}
-          base: figma-webhooks-develop
+          base: figma-webhooks
