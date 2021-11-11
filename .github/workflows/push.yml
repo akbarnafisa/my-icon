@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Create Branch
+        run: |
+          git checkout -b figma-webhooks-new-icon
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
@@ -23,14 +26,20 @@ jobs:
         run: |
           yarn export-svgs
           yarn optimize-svgs
+          yarn generate-svgs
       - name: Commit SVGs
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "Add icon"
-          git push
-      # - name: Generate Icon
-      #   run: yarn generate-svgs
-
-      # This is a basic workflow to help you get started with Actions
+          git push -u origin HEAD
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3.11.0
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: Auto Pull Request
+          title: Your desired title
+          body: Auto-created Pull Request
+          branch: ${{ github.ref }}
+          base: figma-webhooks-develop
