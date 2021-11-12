@@ -21,4 +21,4 @@ const getVersion = async () => {
   }
 }
 
-getVersion()
+export default getVersion()
