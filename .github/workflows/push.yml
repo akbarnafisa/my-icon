@@ -33,7 +33,7 @@ jobs:
             return await getCommitLabel()
           result-encoding: string
       - name: Get result
-          run: echo "${{steps.get-commit-label.outputs.result}}"
+        run: echo "${{steps.get-commit-label.outputs.result}}"
       - name: Commit SVGs
         run: |
           git config user.name github-actions
