@@ -25,12 +25,21 @@ jobs:
           yarn optimize-svgs
           yarn generate-svgs
           yarn build:svgs
+      - uses: actions/github-script@v5
+        id: get-commit-label
+        with:
+          script: |
+            const getCommitLabel = require('./packages/svgs/exporter/getCommitLabel.js')
+            return await getCommitLabel()
+          result-encoding: string
+      - name: Get result
+          run: echo "${{steps.get-commit-label.outputs.result}}"
       - name: Commit SVGs
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Add icon"
+          git commit -m "feat: ${{steps.get-commit-label.outputs.result}}"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.11.0
         with:
