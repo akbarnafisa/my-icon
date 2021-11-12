@@ -17,9 +17,9 @@ const getVersion = async () => {
       return versions.filter(v => v.label)[0].description
     }
   } catch (error) {
+    console.log(error)
     return 'Add icon'
   }
 }
-
 
 module.exports = getVersion
