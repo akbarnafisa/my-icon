@@ -1,6 +1,4 @@
 const findWorkspaceRoot = require('find-yarn-workspace-root');
-
-console.log('findWorkspaceRoot', findWorkspaceRoot())
 require('dotenv').config({ path: `${findWorkspaceRoot()}/.env` })
 
 const axios = require('axios')
