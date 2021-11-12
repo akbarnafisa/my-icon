@@ -21,4 +21,5 @@ const getVersion = async () => {
   }
 }
 
-export default getVersion()
+
+module.exports = getVersion
