@@ -5,7 +5,7 @@
     <div
       class="w-1/2 text-center mb-4 sm:w-1/3 sm:text-left sm:mb-0 text-lg font-semibold"
     >
-      {{ totalFiles }} Files ({{ totalSize }}Kb)
+      {{ totalFiles }} Files
     </div>
     <input
       class="w-72 sm:w-1/3 appearance-none border rounded-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"

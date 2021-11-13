@@ -4,35 +4,28 @@ const fs = require('fs')
 const baseConfig = require('./config.js')
 const config = baseConfig.icon
 const chalk = require('chalk')
+const { replaceAttrs } = require('./utils.js')
 
 const generateVue = ({ svg, filename }) => `
-  <template>
-    ${svg}
-  </template>
+<template>
+  ${svg}
+</template>
 
-  <script>
-  export default {
-    name: '${filename}',
-    props: {
-      size: {
-        type: [String, Number],
-        default: 24,
-      },
-      width: {
-        type: [String, Number],
-        default: '',
-      },
-      height: {
-        type: [String, Number],
-        default: '',
-      },
-      color: {
-        type: String,
-        default: '#A4A4A4',
-      },
+<script>
+export default {
+  name: '${filename}',
+  props: {
+    size: {
+      type: [String, Number],
+      default: 24,
     },
-  }
-  </script>
+    color: {
+      type: String,
+      default: '#A4A4A4',
+    },
+  },
+}
+</script>
 `
 
 console.log(chalk.black.bgGreen.bold('Generate Icon'))
@@ -43,25 +36,7 @@ globby([...config.input, ...config.exclude]).then(icon => {
 
     icon.forEach(v => {
       let filename = v.match(/([^\/]+)(?=\.\w+$)/)[0]
-      const svgString = fse.readFileSync(v).toString()
-
-      const svgAddViewBox = svgString.replace(
-        '<svg',
-        '<svg viewBox="0 0 24 24"'
-      )
-
-      const svgReplaceWidth = svgAddViewBox.replace(
-        /(width)=\".*?\"/,
-        ':width="width || size"'
-      )
-      const svgReplaceHeight = svgReplaceWidth.replace(
-        /(height)=\".*?\"/,
-        ':height="height || size"'
-      )
-      const svgReplaceFill = svgReplaceHeight.replace(
-        /(fill)=\".*?\"/g,
-        ':fill="color"'
-      )
+      const svgReplaceFill = replaceAttrs(v)
 
       // generate .vue file
       const svgVueFile = generateVue({ filename, svg: svgReplaceFill })

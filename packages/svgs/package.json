@@ -5,10 +5,10 @@
   "module": "dist/esm/index.js",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
-    "generate-svgs": "yarn run svgs:icon && yarn run svgs:illustration && yarn run prettier",
+    "generate-svgs": "yarn run svgs:icon && yarn run prettier",
+    "export-svgs": "rm -rf assets/icons && node exporter/index.js",
     "prettier": "prettier --write 'components/**/*'",
     "svgs:icon": "node build/build-icon.js",
-    "svgs:illustration": "node build/build-illustration.js",
     "svgs:optimize": "node build/optimize-icon.js",
     "prepublish": "yarn run build"
   },
@@ -43,5 +43,9 @@
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "dependencies": {
+    "axios": "^0.24.0",
+    "find-yarn-workspace-root": "^2.0.0"
+  }
 }

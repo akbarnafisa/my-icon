@@ -1,0 +1,53 @@
+name: icon-automation
+on:
+  repository_dispatch:
+    types: [update_icon]
+
+jobs:
+  icon_automation:
+    name: figma icon automation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install
+      - name: Export Figma
+        env:
+          FIGMA_BASE_URL: ${{ secrets.FIGMA_BASE_URL }}
+          FIGMA_PROJECT_ID: ${{ secrets.FIGMA_PROJECT_ID }}
+          FIGMA_PROJECT_NODE_ID: ${{ secrets.FIGMA_PROJECT_NODE_ID }}
+          DEV_ACCESS_TOKEN: ${{ secrets.DEV_ACCESS_TOKEN }}
+        run: |
+          yarn export-svgs
+          yarn optimize-svgs
+          yarn generate-svgs
+      - uses: actions/github-script@v5
+        id: get-commit-label
+        env:
+            FIGMA_BASE_URL: ${{ secrets.FIGMA_BASE_URL }}
+            FIGMA_PROJECT_ID: ${{ secrets.FIGMA_PROJECT_ID }}
+            FIGMA_PROJECT_NODE_ID: ${{ secrets.FIGMA_PROJECT_NODE_ID }}
+            DEV_ACCESS_TOKEN: ${{ secrets.DEV_ACCESS_TOKEN }}
+        with:
+          script: |
+            const getCommitLabel = require('./packages/svgs/exporter/getCommitLabel.js')
+            return await getCommitLabel()
+          result-encoding: string
+      - name: Get result
+        run: echo "${{steps.get-commit-label.outputs.result}}"
+      - name: Commit SVGs
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "feat: ${{steps.get-commit-label.outputs.result}}"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3.11.0
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          branch-suffix: short-commit-hash
+          commit-message: Auto Pull Request
+          title: "Add Icon: ${{steps.get-commit-label.outputs.result}}"
+          body: Auto-created Pull Request

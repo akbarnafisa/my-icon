@@ -1,7 +1,0 @@
-export { default as IllusAgreement } from './illustrations/IllusAgreement'
-export { default as IllusConfirmed } from './illustrations/profile/IllusConfirmed'
-export { default as IllusOrdinaryDay } from './illustrations/IllusOrdinaryDay'
-export { default as IllusSocialBio } from './illustrations/profile/IllusSocialBio'
-export { default as IllusSocialGrowth } from './illustrations/IllusSocialGrowth'
-export { default as IllusSuccessful } from './illustrations/profile/IllusSuccessful'
-export { default as IllusSwipe } from './illustrations/IllusSwipe'
