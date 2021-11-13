@@ -1,8 +1,7 @@
 name: icon-automation
 on:
-  push:
-    branches:
-    - figma-webhooks
+  repository_dispatch:
+    types: [update_icon]
 
 jobs:
   icon_automation:
@@ -24,7 +23,6 @@ jobs:
           yarn export-svgs
           yarn optimize-svgs
           yarn generate-svgs
-          yarn build:svgs
       - uses: actions/github-script@v5
         id: get-commit-label
         env:
