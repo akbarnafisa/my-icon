@@ -64,7 +64,6 @@ globby([...config.input, ...config.exclude]).then(icon => {
       iconsFiles.push({
         name: filename,
         path: `icons${outputPath}`,
-        size,
       })
     })
 
