@@ -2,7 +2,7 @@ name: publish-package
 on:
   pull_request:
     branches:
-      - create-pull-request/patch-12345
+      - main
 
 jobs:
   publish-package:
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: echo 'ggwp'
+      - run: echo '${{github.event}}'
     # runs-on: ubuntu-latest
     # steps:
     #   - uses: actions/checkout@v2
