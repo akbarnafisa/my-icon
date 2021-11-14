@@ -2,7 +2,7 @@ name: publish-package
 on:
   pull_request:
     branches:
-      - 'create-pull-request/**'
+      - 'create-pull-request/patch-12345'
 
 jobs:
   publish-package:
