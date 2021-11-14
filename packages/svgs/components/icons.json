@@ -3,123 +3,99 @@
   "files": [
     {
       "name": "calendar",
-      "path": "icons/calendar",
-      "size": 321
+      "path": "icons/calendar"
     },
     {
       "name": "calendar_calendar",
-      "path": "icons/calendar_calendar",
-      "size": 239
+      "path": "icons/calendar_calendar"
     },
     {
       "name": "calendar_check",
-      "path": "icons/calendar_check",
-      "size": 310
+      "path": "icons/calendar_check"
     },
     {
       "name": "calendar_edit",
-      "path": "icons/calendar_edit",
-      "size": 327
+      "path": "icons/calendar_edit"
     },
     {
       "name": "calendar_event",
-      "path": "icons/calendar_event",
-      "size": 242
+      "path": "icons/calendar_event"
     },
     {
       "name": "calendar_minus",
-      "path": "icons/calendar_minus",
-      "size": 243
+      "path": "icons/calendar_minus"
     },
     {
       "name": "calendar_plus",
-      "path": "icons/calendar_plus",
-      "size": 262
+      "path": "icons/calendar_plus"
     },
     {
       "name": "calendar_test",
-      "path": "icons/calendar_test",
-      "size": 243
+      "path": "icons/calendar_test"
     },
     {
       "name": "calendar_week",
-      "path": "icons/calendar_week",
-      "size": 243
+      "path": "icons/calendar_week"
     },
     {
       "name": "close_big",
-      "path": "icons/close_big",
-      "size": 217
+      "path": "icons/close_big"
     },
     {
       "name": "communication_message",
-      "path": "icons/communication_message",
-      "size": 241
+      "path": "icons/communication_message"
     },
     {
       "name": "group",
-      "path": "icons/group",
-      "size": 373
+      "path": "icons/group"
     },
     {
       "name": "group_alt",
-      "path": "icons/group_alt",
-      "size": 373
+      "path": "icons/group_alt"
     },
     {
       "name": "id_card",
-      "path": "icons/id_card",
-      "size": 512
+      "path": "icons/id_card"
     },
     {
       "name": "user",
-      "path": "icons/user",
-      "size": 246
+      "path": "icons/user"
     },
     {
       "name": "user_check",
-      "path": "icons/user_check",
-      "size": 310
+      "path": "icons/user_check"
     },
     {
       "name": "user_circle",
-      "path": "icons/user_circle",
-      "size": 645
+      "path": "icons/user_circle"
     },
     {
       "name": "user_close",
-      "path": "icons/user_close",
-      "size": 375
+      "path": "icons/user_close"
     },
     {
       "name": "user_heart",
-      "path": "icons/user_heart",
-      "size": 524
+      "path": "icons/user_heart"
     },
     {
       "name": "user_minus",
-      "path": "icons/user_minus",
-      "size": 239
+      "path": "icons/user_minus"
     },
     {
       "name": "user_pin",
-      "path": "icons/user_pin",
-      "size": 379
+      "path": "icons/user_pin"
     },
     {
       "name": "user_plus",
-      "path": "icons/user_plus",
-      "size": 258
+      "path": "icons/user_plus"
     },
     {
       "name": "user_square",
-      "path": "icons/user_square",
-      "size": 329
+      "path": "icons/user_square"
     },
     {
       "name": "user_voice",
-      "path": "icons/user_voice",
-      "size": 383
+      "path": "icons/user_voice"
     }
   ]
 }
