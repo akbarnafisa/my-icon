@@ -5,7 +5,7 @@
   "module": "dist/esm/index.js",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
-    "generate-svgs": "yarn run svgs:icon && yarn run prettier",
+    "generate-svgs": "rm -rf components/icons && yarn run svgs:icon && yarn run prettier",
     "export-svgs": "rm -rf assets/icons && node exporter/index.js",
     "prettier": "prettier --write 'components/**/*'",
     "svgs:icon": "node build/build-icon.js",
