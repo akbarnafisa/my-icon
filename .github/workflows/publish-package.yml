@@ -13,17 +13,17 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-    - name: Dump GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: |
-        echo "$GITHUB_CONTEXT"
-        echo "${{ github.ref }}"
-        echo "${{ github.ref_name }}"
-        echo "${{ github.ref_type }}"
-        echo ${{ github.event.pull_request.title }}
-        echo "${{ steps.branch-name.outputs.current_branch }}"
-        echo "${{ github.event.pull_request.head.ref }}"
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+          echo "${{ github.ref }}"
+          echo "${{ github.ref_name }}"
+          echo "${{ github.ref_type }}"
+          echo ${{ github.event.pull_request.title }}
+          echo "${{ steps.branch-name.outputs.current_branch }}"
+          echo "${{ github.event.pull_request.head.ref }}"
 
     # runs-on: ubuntu-latest
     # steps:
