@@ -7,7 +7,6 @@ on:
 
 jobs:
   publish-package:
-    if: github.event.pull_request.merged == true
     name: publish package
     runs-on: ubuntu-latest
     steps:
