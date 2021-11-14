@@ -1,0 +1,23 @@
+name: publish-package
+on:
+  pull_request:
+    branches:
+      - 'create-pull-request/patch*'
+    types: [closed]
+
+jobs:
+  publish-package:
+    if: github.event.pull_request.merged == true
+    name: publish package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: |
+          yarn install
+          yarn lerna:new-version
+          yarn lerna:publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
