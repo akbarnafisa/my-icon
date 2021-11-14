@@ -13,7 +13,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: echo "${{ github.base_ref }}"
+      - run: |
+          echo "${{ github.ref }}"
+          echo "${{ github.ref_name }}"
+          echo "${{ github.ref_type }}"
     # runs-on: ubuntu-latest
     # steps:
     #   - uses: actions/checkout@v2
