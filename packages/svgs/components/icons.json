@@ -1,5 +1,5 @@
 {
-  "total": 26,
+  "total": 27,
   "files": [
     {
       "name": "calendar",
@@ -64,6 +64,10 @@
     {
       "name": "share",
       "path": "icons/share"
+    },
+    {
+      "name": "share_outline",
+      "path": "icons/share_outline"
     },
     {
       "name": "user",
