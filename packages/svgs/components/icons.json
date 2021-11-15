@@ -1,5 +1,5 @@
 {
-  "total": 24,
+  "total": 25,
   "files": [
     {
       "name": "calendar",
@@ -52,6 +52,10 @@
     {
       "name": "group_alt",
       "path": "icons/group_alt"
+    },
+    {
+      "name": "hamburger",
+      "path": "icons/hamburger"
     },
     {
       "name": "id_card",
