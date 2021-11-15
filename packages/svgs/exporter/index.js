@@ -1,3 +1,4 @@
+// https://github.com/jacobtyq/export-figma-svg
 const findWorkspaceRoot = require('find-yarn-workspace-root');
 require('dotenv').config({ path: `${findWorkspaceRoot()}/.env` })
 
