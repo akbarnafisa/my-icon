@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '14'
       - run: yarn install
-      - name: Export Figma
+      - name: Export icon
         env:
           FIGMA_BASE_URL: ${{ secrets.FIGMA_BASE_URL }}
           FIGMA_PROJECT_ID: ${{ secrets.FIGMA_PROJECT_ID }}
@@ -22,7 +22,8 @@ jobs:
         run: |
           yarn export-svgs
           yarn optimize-svgs
-          yarn generate-svgs
+      - name: Build icon
+        run: yarn generate-svgs
       - uses: actions/github-script@v5
         id: get-commit-label
         env:
