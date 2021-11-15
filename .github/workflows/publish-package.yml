@@ -10,14 +10,34 @@ jobs:
   publish-package:
     if: contains(github.head_ref, 'create-pull-request/') && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: |
-          yarn install
-          yarn lerna:new-version
-          yarn lerna:publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+    # https://stackoverflow.com/a/67581515
+    # 1. provide Personal Access Token for checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+          submodules: recursive
+          token: ${{ secrets.GH_TOKEN }}
+
+    # 2. setup .npmrc it uses NODE_AUTH_TOKEN
+    - name: Setup .npmrc file for publish
+      uses: actions/setup-node@v2
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+
+    # 3. configure git user used to push tag
+    - name: Configure Git User
+      run: |
+        git config --global user.email "ci@your-site.com"
+        git config --global user.name "ci@$GITHUB_ACTOR"
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Publish
+      run: |
+        yarn lerna:new-version
+        yarn lerna:publish
