@@ -16,8 +16,8 @@
     "lerna:clean": "lerna clean",
     "lerna:bootstrap": "lerna bootstrap --use-workspaces",
     "lerna:link": "lerna link",
-    "lerna:new-version": "lerna version patch --conventional-commits",
-    "lerna:publish": "lerna publish from-package"
+    "lerna:new-version": "lerna version patch --conventional-commits --yes",
+    "lerna:publish": "lerna publish from-package --yes"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
