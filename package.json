@@ -10,7 +10,7 @@
   "scripts": {
     "dev:docs": "yarn workspace @myicon/docs dev",
     "build:svgs": "yarn workspace @myicon/svgs build && yarn lerna:link",
-    "generate-svgs": "yarn optimize-svgs && yarn workspace @myicon/svgs generate-svgs",
+    "generate-svgs": "yarn workspace @myicon/svgs generate-svgs",
     "export-svgs": "yarn workspace @myicon/svgs export-svgs -- -- -r ./.env",
     "optimize-svgs": "yarn workspace @myicon/svgs svgs:optimize",
     "lerna:clean": "lerna clean",
