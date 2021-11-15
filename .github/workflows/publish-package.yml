@@ -3,10 +3,11 @@ on:
   pull_request:
     branches:
       - main
+    types: [closed]
 
 jobs:
   publish-package:
-    # if: ${{contains(github.base_ref, 'create-pull-request/')}}
+    if: contains(github.head_ref, 'create-pull-request/') && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,16 +15,12 @@ jobs:
         with:
           node-version: '14'
       - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
-          echo "$GITHUB_CONTEXT"
           echo "${{ github.ref }}"
           echo "${{ github.ref_name }}"
           echo "${{ github.ref_type }}"
           echo ${{ github.event.pull_request.title }}
           echo "${{ steps.branch-name.outputs.current_branch }}"
-          echo "${{ github.event.pull_request.head.ref }}"
 
     # runs-on: ubuntu-latest
     # steps:
