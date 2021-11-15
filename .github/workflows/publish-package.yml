@@ -5,6 +5,7 @@ on:
       - main
     types: [closed]
 
+
 jobs:
   publish-package:
     if: contains(github.head_ref, 'create-pull-request/') && github.event.pull_request.merged == true
