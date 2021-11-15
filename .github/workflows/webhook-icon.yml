@@ -43,7 +43,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "feat: ${{steps.get-commit-label.outputs.result}}"
+          git commit -m "feat(icon): ${{steps.get-commit-label.outputs.result}}"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.11.0
         with:
