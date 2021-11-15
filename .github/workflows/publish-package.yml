@@ -14,23 +14,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Dump GitHub context
-        run: |
-          echo "${{ github.ref }}"
-          echo "${{ github.ref_name }}"
-          echo "${{ github.ref_type }}"
-          echo ${{ github.event.pull_request.title }}
-          echo "${{ steps.branch-name.outputs.current_branch }}"
-
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - uses: actions/checkout@v2
-    #   - uses: actions/setup-node@v2
-    #     with:
-    #       node-version: '14'
-    #   - run: |
-    #       yarn install
-    #       yarn lerna:new-version
-    #       yarn lerna:publish
-    #     env:
-    #       NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - run: |
+          yarn install
+          yarn lerna:new-version
+          yarn lerna:publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
